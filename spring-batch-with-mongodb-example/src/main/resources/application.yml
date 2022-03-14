@@ -1,0 +1,31 @@
+spring:
+  data:
+    mongodb:
+      database: batchdb
+      host: 127.0.0.1
+      port: 27017
+  application:
+    name: authorize-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: Information!357
+    url: jdbc:mysql://localhost:3306/narenveta?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+  batch:
+    job:
+      enabled: false
+
+    jdbc:
+      initialize-schema: ALWAYS
+      
+      
+server:
+  port: 9897
